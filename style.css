@@ -5,23 +5,23 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.main {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.main img {
+.header .img {
   width: 100%;
 }
 
-.main,
+.header,
 .more-info {
   font-family: Lato, cursive;
 }
 
-.centered-main-page-element {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -33,7 +33,7 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.task-row {
   display: flex;
   margin-top: 20px;
 }
@@ -44,7 +44,7 @@ ul {
 }
 
 li,
-h3 {
+.header-h3 {
   list-style: none;
 }
 
@@ -68,11 +68,11 @@ button:hover {
 }
 
 /* Heading */
-h1 {
+.add-item {
   margin-bottom: 20px;
 }
 
-h3,
+.header-h3,
 label[for='new-task'],
 .add-item {
   color: #333;
@@ -106,7 +106,7 @@ label[for='new-task'] {
   margin: 0 0 20px;
 }
 
-input#new-task {
+.input#new-task {
   width: 318px;
 }
 
@@ -150,27 +150,31 @@ li > input[type="text"] {
 }
 
 /* Completed */
-ul#completed-tasks label {
+#list#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.list li input[type=text] {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+.list li.edit-mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.list li.edit-mode label {
   display: none;
 }
 
+.footer {
+  min-height: 100px;
+}
+
 @media (max-width:768px) {
-  .main {
+  .header {
     text-align: center;
   }
 }
